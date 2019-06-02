@@ -1,0 +1,28 @@
+{
+"personal":{
+    "name": "Filip Mularczyk",
+    "email": "filip.mularczyk@gmail.com",
+    "address": "Staniątki 825"
+},
+"about": "I Like Vodka!",
+"skills":{
+    "python": 75,
+    "numpy": 75,
+    "machine learning": 60
+    },
+"employment-history":[
+    {
+     "name": "Elmodis",
+     "title": "R&D Engineer",
+     "begin-date": "2019-05-05",
+     "end-date": null,
+     "details": ["string 1", "string 2"]
+     },
+    {"name": "Aiut",
+     "title": null,
+     "begin-date": "2019-05-05",
+     "end-date": null,
+     "details": ["string 1", "string 2"]
+     }
+   ]
+}
