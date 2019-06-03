@@ -47,3 +47,9 @@
     }
 
 }
+
+1a. create jsonschema for above
+
+
+2. ADD SASS support
+https://bulma.io/documentation/customize/with-node-sass/

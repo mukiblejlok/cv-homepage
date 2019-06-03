@@ -1,21 +1,153 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-Do lists</title>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> -->
-    <link rel="stylesheet" href="/static/bulma/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ data.title }}</title>
+        <link rel="stylesheet" href="/static/bulma/css/bulma.min.css">
+        <link rel="stylesheet" href="/static/bulma/css/bulma-timeline.min.css">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </head>
-    <body>
-        <div class="column is-quater is-offset-one-quarter has-text-centered has-background-primary">
-            {{ data.personal.name }}
+<body id="top">
+    <section class="hero is-dark is-medium">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">{{ data.top_name }}</h1>
+            <h2 class="subtitle">{{ data.top_position }}</h2>
         </div>
-        <div class="column has-text-centered">
-            {{ data }}
+    </div>
+    </section>
+
+
         </div>
+    </section>
+    <section class='section two-columns'>
+    <div class="columns is-mobile">
+        <div class="column is-4 is-offset-2 my-profile">
+            {% if "about" in data %}
+
+            <h5 class="title">About</h5>
+            <div class='content has-text-justified'>
+                {{ data.about|join:" "|linebreaks }}
+            </div>
+            {% endif %}
+
+            {% if "personal" in data %}
+            <h5 class="title">Personal Info</h5>
+                <ul class="personal-list">
+                {% for element in data.personal %}  
+                    <li>
+                    <strong class="is-uppercase">
+                    <i class="{{ element.icon }}"> </i> 
+                    {{ element.name }}</strong><br>
+                    {% if element.href %}
+                    <a href="{{ element.href }}">{{ element.value }}</a>
+                    {% else %}
+                    <span>{{ element.value }}</span>
+                    {% endif %}
+                    </li>
+                    <br />
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    <!-- <div class="column is-2 empty-column"></div> -->
         
-    </body>
+        <div class="column is-4 skills">
+            {% if "skills" in data %}
+            <h5 class="title">Skills</h5>
+            <ul class="skills-list">
+            {% for element in data.skills %}
+                <li>
+                    <br />
+                <strong class="is-uppercase">{{ element.name }}</strong>
+                <progress class="progress is-large is-primary" 
+                          value="{{ element.level }}" max="100"></progress>
+                
+                </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <br /> <br />
+            {% if "tools" in data %}
+            <h5 class="title">Tools</h5>
+            <p>{{ data.tools|join:", " }}.</p>
+            {% endif %}
+        </div>
+    </div>
+    </section>
+    
+    <section class="section hero is-light" id="resume">
+     
+     <div class='columns'>
+     <div class='column is-6 is-offset-3'>
+     <h5 class="title has-text-centered">Resumee</h5>
+     
+
+<div class="timeline is-centered">
+  {% for element in data.history %}
+  
+    
+    {% if element.end %}
+    <header class="timeline-header">
+    <span class="tag is-medium is-primary">{{ element.end }}</span>
+    </header>
+    {% endif %}
+
+    <div class="timeline-item is-primary">
+        {% if element.type == "job" %}
+        <div class="timeline-marker is-primary"></div>
+        <div class="timeline-content is-primary">
+        {% elif element.type == "university" %}
+        <div class="timeline-marker is-secondary"></div>
+        <div class="timeline-content is-secondary">
+        {% endif %}
+            <h5 class="title is-uppercase is-5">
+            <span class='icon is-medium'>
+            {% if element.type == "job" %}
+            <i class="fa fa-briefcase"></i>
+            {% elif element.type == "university" %}
+            <i class="fa fa-university"></i>
+            {% endif %} 
+            </span>
+            {{element.name}}</h5>
+            <h6 class="subtitle is-6">{{element.title}}</h6>
+
+          <ul class="content is-small has-text-justified">
+          {% for detail in element.details %}
+
+            <li>
+            <!-- <span class="icon is-small"><i class="fa fa-circle"></i></span> -->
+            <p class="content">{{ detail }}<br /><br /></p>
+            </span>
+            </li>
+          {% endfor %}
+         </ul>
+        </div>
+    </div>
+    {% if element.begin %}
+    <header class="timeline-header">
+    <span class="tag is-medium is-primary">{{ element.begin }}</span>
+    </header>
+    {% endif %}
+
+  {% endfor %}
+  <div class="timeline-item is-danger">
+    <div class="timeline-marker is-primary is-icon">
+    <i class="fa fa-flag"></i>
+    </div>
+  </div>
+</div>
+
+</div></div></section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    <p>Done with <a href="https://bulma.io/">Bulma</a></p>
+    </div>
+</footer>
+  
+</body>
 </html>
