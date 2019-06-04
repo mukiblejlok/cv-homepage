@@ -118,7 +118,7 @@
      <div class='column is-6 is-offset-3'>
      <h5 class="title has-text-centered">Employment History</h5>
      
-<div class="timeline is-centered">
+<div class="timeline">
   {% for element in data.history %}
     
     {% if element.end %}
@@ -129,10 +129,10 @@
 
     <div class="timeline-item is-primary">
         {% if element.type == "job" %}
-        <div class="timeline-marker is-primary"></div>
+        <!--  <div class="timeline-marker is-primary"></div> -->
         <div class="timeline-content is-primary">
         {% elif element.type == "university" %}
-        <div class="timeline-marker is-secondary"></div>
+        <!-- <div class="timeline-marker is-secondary"></div> -->
         <div class="timeline-content is-secondary">
         {% endif %}
             <h5 class="title is-uppercase is-5">
