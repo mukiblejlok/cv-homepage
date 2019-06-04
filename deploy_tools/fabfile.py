@@ -3,7 +3,7 @@ from string import ascii_letters
 from fabric.contrib.files import append, exists
 from fabric.api import cd, env, local, run
 
-REPO_URL = r'https://github.com/mukiblejlok/homepage.git'
+REPO_URL = r'https://github.com/mukiblejlok/cv-homepage.git'
 
 
 def deploy():
