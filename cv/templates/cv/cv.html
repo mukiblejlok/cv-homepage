@@ -10,18 +10,21 @@
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </head>
 <body id="top">
+
+    {% if 'header' in data %}
     <section class="hero is-dark is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <h1 class="title">{{ data.top_name }}</h1>
-            <h2 class="subtitle">{{ data.top_position }}</h2>
+            <h1 class="title">{{ data.header.name }}</h1>
+            <h2 class="subtitle">{{ data.header.position }}</h2>
+            <h2 class="subtitle is-italic">{{ data.header.quote }}</h2>
+
         </div>
     </div>
     </section>
+    {% endif %}
 
 
-        </div>
-    </section>
     <section class='section two-columns'>
     <div class="columns is-mobile">
         <div class="column is-4 is-offset-2 my-profile">
@@ -41,18 +44,30 @@
                     <strong class="is-uppercase">
                     <i class="{{ element.icon }}"> </i> 
                     {{ element.name }}</strong><br>
-                    {% if element.href %}
-                    <a href="{{ element.href }}">{{ element.value }}</a>
+                    {% if element.link %}
+                    <a href="{{ element.link }}">{{ element.value }}</a>
                     {% else %}
-                    <span>{{ element.value }}</span>
+                    <span>{{ element.value|linebreaks }}</span>
                     {% endif %}
                     </li>
                     <br />
                 {% endfor %}
                 </ul>
             {% endif %}
+            
+            {% if "strengths" in data %}
+            <h5 class="title">Character Strengths</h5>
+                <ul class="personal-list">
+                {% for element in data.strengths.top %}
+                    <oi>
+                    {{ element }}
+                    </oi>   
+                {% endfor %}
+                </ul>
+
+            {% endif %}
+
         </div>
-    <!-- <div class="column is-2 empty-column"></div> -->
         
         <div class="column is-4 skills">
             {% if "skills" in data %}
@@ -62,7 +77,7 @@
                 <li>
                     <br />
                 <strong class="is-uppercase">{{ element.name }}</strong>
-                <progress class="progress is-large is-primary" 
+                <progress class="progress is-large is-{{ element.color }}" 
                           value="{{ element.level }}" max="100"></progress>
                 
                 </li>
@@ -73,7 +88,12 @@
             <br /> <br />
             {% if "tools" in data %}
             <h5 class="title">Tools</h5>
-            <p>{{ data.tools|join:", " }}.</p>
+            <div class='tags'>
+                {% for element in data.tools %}
+                <span class='tag is-medium is-{{ element.color }}'>
+                {{ element.name }}
+                </span>
+                {% endfor %}
             {% endif %}
         </div>
     </div>

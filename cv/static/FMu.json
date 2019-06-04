@@ -1,0 +1,179 @@
+{
+  "title": "CV Filip Mularczyk",
+  "header": {
+    "name": "Filip Mularczyk",
+    "position": "Industry 4.0 Engineer",
+    "background_image": "static/background1.png",
+    "quote": "Do be do be do."
+  },
+  "personal": [
+    {
+      "name": "Full Name",
+      "value": "Filip Mularczyk",
+      "icon": "fas fa-user",
+      "link": null
+    },
+    {
+      "name": "Email",
+      "value": "filip.mularczyk@gmail.com",
+      "icon": "fas fa-envelope",
+      "link": "mailto:filip.mularczyk@gmail.com"
+    },
+    {
+      "name": "Homepage",
+      "value": "fmularczyk.pl",
+      "icon": "fas fa-desktop",
+      "link": "https://fmularczyk.pl"
+    },
+    {
+      "name": "linkedin",
+      "value": "linked.in/filip-mularczyk",
+      "icon": "fab fa-linkedin",
+      "link": "https://www.linkedin.com/in/filip-mularczyk-bbb7b598/"
+    },
+    {
+      "name": "address",
+      "value": "Staniątki 825, Poland",
+      "icon": "fa fa-home",
+      "link": null
+    }
+  ],
+  "about": [
+    "I am R&D engineer working in IIoT area. ",
+    "I design and implement solutions for rotating machinery condition monitoring system, ",
+    "where I use both condition based monitoring approach and machine learning algorithms. ",
+    "I do full data stack, from data collection and cleaning to diagnostic algorithms deployment on device or cloud.\n",
+    "Also I have an 5+ years experience as an automation engineer. ",
+    "I was involved in design, development and commissioning of PLC and SCADA system for different areas of industry."
+  ],
+  "strengths":{
+    "link": null,
+    "top": ["Restorative", "Harmony", "Consistency", "Learner", "Analytical"]
+  },
+  "skills": [
+    {
+      "name": "Python",
+      "level": 70,
+      "color": "primary"
+    },
+    {
+      "name": "Data Engineering",
+      "level": 80,
+      "color": "primary"
+    },
+    {
+      "name": "Data Visualisation",
+      "level": 60,
+      "color": "primary"
+    },
+    {
+      "name": "Machine Learning",
+      "level": 60,
+      "color": "primary"
+    },
+    {
+      "name": "Electric and Vibration based diagnostic",
+      "level": 60,
+      "color": "primary"
+    },
+    {
+      "name": "Development Tools",
+      "level": 50,
+      "color": "primary"
+    },
+    {
+      "name": "Test Driven Development",
+      "level": 30,
+      "color": "primary"
+    },
+    {
+      "name": "Siemens PLC & HMI",
+      "level": 70,
+      "color": "secondary"
+    },
+    {
+      "name": "Metso DNA",
+      "level": 90,
+      "color": "secondary"
+    },
+    {
+      "name": "Industrial communication protocols",
+      "level": 50,
+      "color": "secondary"
+    },
+    {
+      "name": "Automation systems commissioning",
+      "level": 70,
+      "color": "secondary"
+    }
+  ],
+  "history": [
+    {
+      "type": "job",
+      "name": "Elmodis",
+      "title": "R&D Engineer",
+      "begin": "2017",
+      "end": null,
+      "details": [
+        "Development of acquisition methods and processing algorithms of diagnostic data collected from hardware sensors.",
+        "Development of Machine Learning solutions used for machine condition monitoring. Implementation both on edge devices (Python) and on IoT Cloud (Microsoft Azure).",
+        "Design and implementation of data acquisition system used at DC Traction Motor test stand. PKP CargoTabor, Karsznice. (Labview)."
+      ]
+    },
+    {
+      "type": "job",
+      "name": "Aiut",
+      "title": "Automation Engineer",
+      "begin": "2010",
+      "end": null,
+      "details": [
+        "SCADA and DCS design and implementation for HVAC System on Oasis class cruise vessel. St. Nazaire, France. (Metso, metsoDNA).",
+        "SCADA and DCS design and implementation for batch cooking process in Pulp Mill. Tres Barras, Brazil. (Metso, metsoDNA).",
+        "SCADA and DCS design and implementation for power plant and effluent treatment plant in Paper Mill. Manchester, UK. (Metso, metsoDNA).",
+        "HMI and PLC logic design and implementation for paper winder with shaft puller in Paper Mill. Changzhou, China (Siemens, S7-300, WinCC flexible).",
+        "HMI and PLC logic design and implementation for paper sizing press. Quzhou, China. (Siemens, S7-400, WinCC flexible).",
+        "SCADA and PLC logic design and implementation for CIP station in Dairy Plant. Radomsko, Poland. (Siemens, S7-300, WinCC).",
+        "SCADA and PLC logic design and implementation for Error-Proofing system in Car Manufacturing Plant. Bochum, Germany (Siemens, S7-400, WinCC)."
+      ]
+    },
+    {
+      "type": "university",
+      "name": "Silesian University of Technology",
+      "title": "MSc. Automation Control",
+      "begin": "2005",
+      "end": null
+    }
+  ],
+  "tools": [
+    {"color":"primary", "name": "Numpy"},
+    {"color":"primary", "name": "Scipy"},
+    {"color":"primary", "name": "Scikit-Learn"},
+    {"color":"primary", "name": "Pandas"},
+    {"color":"primary", "name": "PyTorch"},
+    {"color":"primary", "name": "Matplotlib"},
+    {"color":"primary", "name": "Seaborn"},
+    {"color":"secondary", "name": "Mesto DNA"},
+    {"color":"secondary", "name": "TIA Portal"},
+    {"color":"secondary", "name": "SIMATIC"},
+    {"color":"secondary", "name": "WinCC"},
+    {"color":"secondary", "name": "Labview"}
+  ],
+  "projects":[
+    {
+        "name": "Fourier Explained",
+        "link": "projects/fourier/index.html",
+        "background": "projects/fourier/bacground.png"
+    },
+    {
+        "name": "Batch Cooking Scheduler",
+        "link": "projects/batch_cooking/index.html",
+        "background": "projects/batch_cooking/bacground.png"
+    }
+    ],
+
+  "contact":
+    {
+        "type":"email",
+        "address":"filip.mularczyk@gmail.com"
+    } 
+}
