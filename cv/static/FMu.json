@@ -4,7 +4,7 @@
     "name": "Filip Mularczyk",
     "position": "Industry 4.0 Engineer",
     "background_image": "static/background1.png",
-    "quote": "Do be do be do."
+    "quote": ""
   },
   "personal": [
     {
@@ -39,17 +39,35 @@
     }
   ],
   "about": [
-    "I am R&D engineer working in IIoT area. ",
-    "I design and implement solutions for rotating machinery condition monitoring system, ",
+    "I am R&D engineer working with IIoT startup. ",
+    "I design and implement solutions for rotating machinery monitoring system, ",
     "where I use both condition based monitoring approach and machine learning algorithms. ",
     "I do full data stack, from data collection and cleaning to diagnostic algorithms deployment on device or cloud.\n",
-    "Also I have an 5+ years experience as an automation engineer. ",
-    "I was involved in design, development and commissioning of PLC and SCADA system for different areas of industry."
+    "Also I have an 5+ years of experience as an automation engineer. ",
+    "I was involved in design, development and commissioning of PLC & SCADA system for different areas of industry (Pulp & Paper, Marine, CHP)."
   ],
-  "strengths":{
-    "link": null,
-    "top": ["Restorative", "Harmony", "Consistency", "Learner", "Analytical"]
-  },
+  "strengths":[
+    {"name": "Restorative",
+     "description": "People exceptionally talented in the Restorative theme are adept at dealing with problems. They are good at figuring out what is wrong and resolving it.",
+     "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/709/restorative"
+     },
+    {"name": "Harmony",
+     "description": "People exceptionally talented in the Harmony theme look for consensus. They don’t enjoy conflict; rather, they seek areas of agreement.",
+     "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/676/harmony"
+     },
+    {"name": "Consistency",
+     "description": "People exceptionally talented in the Consistency theme are keenly aware of the need to treat people the same. They crave stable routines and clear rules and procedures that everyone can follow.",
+     "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/652/consistency"
+     },
+    {"name": "Learner",
+     "description": "People exceptionally talented in the Learner theme have a great desire to learn and want to continuously improve. The process of learning, rather than the outcome, excites them.",
+     "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/694/learner"
+     },
+    {"name": "Analytical",
+     "description": "People exceptionally talented in the Analytical theme search for reasons and causes. They have the ability to think about all of the factors that might affect a situation.",
+     "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/631/analytical"
+     }
+],
   "skills": [
     {
       "name": "Python",

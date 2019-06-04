@@ -6,13 +6,14 @@
         <title>{{ data.title }}</title>
         <link rel="stylesheet" href="/static/bulma/css/bulma.min.css">
         <link rel="stylesheet" href="/static/bulma/css/bulma-timeline.min.css">
-
+        <link rel="stylesheet" href="/static/bulma/css/bulma-extensions.min.css">
+        <script type="text/javascript" src="/static/bulma/js/bulma-accordion.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </head>
 <body id="top">
-
+<!-- HERO HEADER -->
     {% if 'header' in data %}
-    <section class="hero is-dark is-medium">
+    <section class="hero is-light is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
             <h1 class="title">{{ data.header.name }}</h1>
@@ -24,10 +25,10 @@
     </section>
     {% endif %}
 
-
     <section class='section two-columns'>
     <div class="columns is-mobile">
         <div class="column is-4 is-offset-2 my-profile">
+<!-- ABOUT -->
             {% if "about" in data %}
 
             <h5 class="title">About</h5>
@@ -35,7 +36,7 @@
                 {{ data.about|join:" "|linebreaks }}
             </div>
             {% endif %}
-
+<!-- PERSONAL -->
             {% if "personal" in data %}
             <h5 class="title">Personal Info</h5>
                 <ul class="personal-list">
@@ -45,7 +46,7 @@
                     <i class="{{ element.icon }}"> </i> 
                     {{ element.name }}</strong><br>
                     {% if element.link %}
-                    <a href="{{ element.link }}">{{ element.value }}</a>
+                    <a class='is-link' href="{{ element.link }}">{{ element.value }}</a>
                     {% else %}
                     <span>{{ element.value|linebreaks }}</span>
                     {% endif %}
@@ -54,22 +55,33 @@
                 {% endfor %}
                 </ul>
             {% endif %}
-            
+<!-- STRENGTHS  -->
             {% if "strengths" in data %}
             <h5 class="title">Character Strengths</h5>
-                <ul class="personal-list">
-                {% for element in data.strengths.top %}
-                    <oi>
-                    {{ element }}
-                    </oi>   
+                <div class='columns'>
+                    <div class='column is-8'>
+                <section class="accordions">
+                {% for element in data.strengths %}
+                <article class="accordion is-light">
+                <div class="accordion-header toggle is-primary">
+                <p>{{ element.name }}</p>
+                </div>
+                <div class="accordion-body">
+                <div class="accordion-content is-white">
+                <p>{{ element.description }}<br /></p>
+                {% if element.link %}
+                <p><a href="{{ element.link }}" class='is-link is-small' target="_blank" rel="noopener noreferrer">Read more</a></p>
+                {% endif%}
+                </div>
+                </div>
+                </article>
                 {% endfor %}
-                </ul>
-
+            </section></div></div>
             {% endif %}
-
         </div>
-        
+<!-------------------------------------->
         <div class="column is-4 skills">
+<!-- SKILLS -->
             {% if "skills" in data %}
             <h5 class="title">Skills</h5>
             <ul class="skills-list">
@@ -84,7 +96,7 @@
             {% endfor %}
             </ul>
             {% endif %}
-
+<!-- TOOLS -->
             <br /> <br />
             {% if "tools" in data %}
             <h5 class="title">Tools</h5>
@@ -98,17 +110,16 @@
         </div>
     </div>
     </section>
-    
+
+
+<!-- EMPLOYMENT     -->
     <section class="section hero is-light" id="resume">
-     
      <div class='columns'>
      <div class='column is-6 is-offset-3'>
-     <h5 class="title has-text-centered">Resumee</h5>
+     <h5 class="title has-text-centered">Employment History</h5>
      
-
 <div class="timeline is-centered">
   {% for element in data.history %}
-  
     
     {% if element.end %}
     <header class="timeline-header">
@@ -154,7 +165,7 @@
     {% endif %}
 
   {% endfor %}
-  <div class="timeline-item is-danger">
+  <div class="timeline-item">
     <div class="timeline-marker is-primary is-icon">
     <i class="fa fa-flag"></i>
     </div>
@@ -163,11 +174,19 @@
 
 </div></div></section>
 
+<!-- FOOTER -->
 <footer class="footer">
     <div class="content has-text-centered">
-    <p>Done with <a href="https://bulma.io/">Bulma</a></p>
+    <p class='is-small'>
+    Made with <a href="https://bulma.io/">Bulma</a><br />
+    Inspired by <a href="https://www.jethromay.com/">Jethro May</a></p>
     </div>
 </footer>
-  
+
+<script>
+// self executing function here
+var accordions = bulmaAccordion.attach(); // accordions now contains an array of all Accordion instances
+</script>
+
 </body>
 </html>

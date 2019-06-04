@@ -19,4 +19,6 @@ from cv import views as cv_views
 
 urlpatterns = [
     url(r'^$', cv_views.cv, name='cv'),
+    url(r'cv$', cv_views.cv, name='cv'),
+
 ]
