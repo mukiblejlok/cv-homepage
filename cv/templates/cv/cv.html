@@ -26,11 +26,11 @@
     {% endif %}
 
     <section class='section two-columns'>
+    <div class="container is-fullhd">
     <div class="columns is-mobile">
-        <div class="column is-4 is-offset-2 my-profile">
+        <div class="column is-6 my-profile">
 <!-- ABOUT -->
             {% if "about" in data %}
-
             <h5 class="title">About</h5>
             <div class='content has-text-justified'>
                 {{ data.about|join:" "|linebreaks }}
@@ -80,7 +80,7 @@
             {% endif %}
         </div>
 <!-------------------------------------->
-        <div class="column is-4 skills">
+        <div class="column is-6 skills">
 <!-- SKILLS -->
             {% if "skills" in data %}
             <h5 class="title">Skills</h5>
@@ -171,7 +171,7 @@
     </div>
   </div>
 </div>
-
+</div>
 </div></div></section>
 
 <!-- FOOTER -->

@@ -9,7 +9,7 @@ EnvironmentFile=/home/USER_NAME/sites/DOMAIN/.env
 
 ExecStart=/home/USER_NAME/sites/DOMAIN/venv/bin/gunicorn \
     --bind unix:/tmp/DOMAIN.socket \
-    superlists.wsgi:application
+    homepage.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
