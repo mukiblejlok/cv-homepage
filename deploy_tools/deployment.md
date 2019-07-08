@@ -17,6 +17,6 @@ git push
 
 3. Run fabric script from /development_tools
 ```
-cd development_tools
+cd deploy_tools
 fab deploy:host=django@fmularczyk.pl
 ```
