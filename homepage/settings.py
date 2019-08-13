@@ -21,11 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if 'DJANGO_DEBUG_FALSE' in os.environ:
     DEBUG = False
     SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
-    ALLOWED_HOSTS = [os.environ.get('SITENAME')]
 else:
     DEBUG = True
     SECRET_KEY = 'Lub13-pL4ck1'
-    ALLOWED_HOSTS = [os.environ.get('SITENAME')]
+
+ALLOWED_HOSTS = [os.environ.get('SITENAME'),
+                 "fmularczyk.pl",
+                 "www.fmularczyk.pl"]
 
 
 # Application definition
