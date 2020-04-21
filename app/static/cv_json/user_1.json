@@ -91,7 +91,6 @@
   },
   "about": [
     "I am R&D engineer working at Industrial IoT startup. I design and implement solutions for rotating machinery monitoring system, where I use both condition based monitoring approach and machine learning algorithms. I do full data stack, from data collection and cleaning to diagnostic algorithms deployment on device or cloud.",
-    "\n",
     "Also I have an 5+ years of experience as an automation engineer. I was involved in design, development and commissioning of PLC & SCADA system for different areas of industry (Pulp & Paper, Marine, Energy)."
   ],
   "strengths": [

@@ -1,0 +1,19 @@
+{% extends "main/base_bootstrap.html" %}
+{% from 'bootstrap/form.html' import render_form %}
+
+
+{% block title %}Login Page{% endblock %}
+
+{% block page_content %}
+    <br/> <br/>
+    <div class="container text-center">
+        <div class="jumbotron">
+
+            <h2 class="display-4">Log In</h2>
+            <hr class="my-4">
+            <div class="col-sm-6">
+                {{ render_form(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

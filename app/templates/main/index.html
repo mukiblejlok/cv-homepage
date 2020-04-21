@@ -1,0 +1,26 @@
+{% extends "main/base_bootstrap.html" %}
+{% block styles %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block page_content %}
+    <div class="container">
+        <div class="page-header">
+            <h2>Hello, {{ current_user }}</h2>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="page-footer font-small">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://abb.com/"> Filip Mularczyk</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+{% endblock %}

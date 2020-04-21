@@ -1,0 +1,17 @@
+{% extends "main/base_bootstrap.html" %}
+{% block styles %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block page_content %}
+    <div class="container">
+        <div class="page-header">
+            <h2>Hello, {{ current_user.first_name }}! <small>You are an Admin.</small></h2>
+        </div>
+        <a href="{{ url_for("auth.logout") }}">Logout</a>
+    </div>
+
+
+    </div>
+{% endblock %}
