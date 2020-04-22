@@ -11,7 +11,6 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     WTF_CSRF_SECRET_KEY = os.getenv("CSRF_SECRET_KEY", SECRET_KEY)
 
-
     @staticmethod
     def init_app(app):
         pass

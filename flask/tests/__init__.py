@@ -4,9 +4,9 @@ import warnings
 from flask import Response
 from flask_testing import TestCase
 
-from app import create_app, db
+from flask.app import create_app, db
 
-from app.models.user import User
+from flask.app.models import User
 
 test_user = User(id=1001,
                  first_name="Test",
