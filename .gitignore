@@ -105,7 +105,7 @@ venv.bak/
 
 #node
 node-modules/
-/flask_session/
-/db/
+/flask/flask_session/
+/flask/db/
 /.hypothesis/
 /.idea/

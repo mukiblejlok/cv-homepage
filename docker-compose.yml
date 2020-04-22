@@ -1,0 +1,55 @@
+version: "3"
+services:
+  flask_server:
+    container_name: flask_server
+    build:
+      args:
+        - PROXY=${HTTP_PROXY}
+        - FLASK_PORT=${FLASK_PORT}
+        - APP_USER=${APP_USER}
+      context: ./flask
+      dockerfile: Dockerfile
+    environment:
+      - HTTP_PROXY=${HTTP_PROXY}
+      - HTTPS_PROXY=${HTTPS_PROXY}
+      - NO_PROXY=${NO_PROXY}
+      - SECRET_KEY=${SECRET_KEY}
+      - FLASK_APP=${FLASK_APP}
+      - FLASK_DEBUG=${FLASK_DEBUG}
+      - PORT=${FLASK_PORT}
+      - HOST=${FLASK_HOST}
+      - WORKERS_PER_CORE=${GUNICORN_WORKERS}
+      - WEB_CONCURRENCY=${GUNICORN_WEB_CONCURRENCY}
+    volumes:
+      - ./flask/db:/home/${APP_USER}/db
+      - ./flask/app/static/:/home/${APP_USER}/app/static
+    dns:
+      - ${DNS}
+    entrypoint: /home/${APP_USER}/entrypoint.sh
+    command: /home/${APP_USER}/start.sh
+    networks:
+      - nginx_network
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    environment:
+      - NGINX_PORT=${NGINX_PORT}
+      - SERVER_NAME=${SERVER_NAME}
+      - FLASK_PORT=${FLASK_PORT}
+      - APP_USER=${APP_USER}
+      - DOLLAR=${DOLLAR}
+    ports:
+      - "${OUTSIDE_PORT}:${NGINX_PORT}"
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./flask/app/static/:/home/${APP_USER}/app/static
+    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/flask_server.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
+    depends_on:
+      - flask_server
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
