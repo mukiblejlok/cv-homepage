@@ -1,0 +1,6 @@
+.dockerignore
+venv
+.hypothesis
+.pytest_cache
+flask/flask_session
+

@@ -1,0 +1,234 @@
+{
+  "personal": [
+    {
+      "name": "Full Name",
+      "value": "Filip Mularczyk",
+      "icon": "fas fa-user",
+      "link": null
+    },
+    {
+      "name": "Email",
+      "value": "filip.mularczyk@gmail.com",
+      "icon": "fas fa-envelope",
+      "link": "mailto:filip.mularczyk@gmail.com"
+    },
+    {
+      "name": "Homepage",
+      "value": "fmularczyk.pl",
+      "icon": "fas fa-desktop",
+      "link": "https://fmularczyk.pl"
+    },
+    {
+      "name": "linkedin",
+      "value": "linked.in/filip-mularczyk",
+      "icon": "fab fa-linkedin",
+      "link": "https://www.linkedin.com/in/filip-mularczyk-bbb7b598/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "level": 70,
+      "color": "primary"
+    },
+    {
+      "name": "Python Data Engineering",
+      "level": 80,
+      "color": "primary"
+    },
+    {
+      "name": "Data Visualisation",
+      "level": 60,
+      "color": "primary"
+    },
+    {
+      "name": "Machine Learning",
+      "level": 60,
+      "color": "primary"
+    },
+    {
+      "name": "Electric and Vibration based diagnostic",
+      "level": 60,
+      "color": "primary"
+    },
+    {
+      "name": "Software Development Tools",
+      "level": 50,
+      "color": "primary"
+    },
+    {
+      "name": "Test Driven Development",
+      "level": 30,
+      "color": "primary"
+    },
+    {
+      "name": "Siemens PLC & HMI",
+      "level": 70,
+      "color": "secondary"
+    },
+    {
+      "name": "Metso DNA",
+      "level": 90,
+      "color": "secondary"
+    },
+    {
+      "name": "Industrial communication protocols",
+      "level": 50,
+      "color": "secondary"
+    },
+    {
+      "name": "Automation systems commissioning",
+      "level": 70,
+      "color": "secondary"
+    }
+  ],
+  "title": "CV Filip Mularczyk",
+  "header": {
+    "name": "Filip Mularczyk",
+    "position": "Industry 4.0 Engineer",
+    "background_image": "static/background1.png",
+    "quote": ""
+  },
+  "about": [
+    "I am R&D engineer working at Industrial IoT startup. I design and implement solutions for rotating machinery monitoring system, where I use both condition based monitoring approach and machine learning algorithms. I do full data stack, from data collection and cleaning to diagnostic algorithms deployment on device or cloud.",
+    "Also I have an 5+ years of experience as an automation engineer. I was involved in design, development and commissioning of PLC & SCADA system for different areas of industry (Pulp & Paper, Marine, Energy)."
+  ],
+  "strengths": [
+    {
+      "name": "Restorative",
+      "description": "People exceptionally talented in the Restorative theme are adept at dealing with problems. They are good at figuring out what is wrong and resolving it.",
+      "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/709/restorative"
+    },
+    {
+      "name": "Harmony",
+      "description": "People exceptionally talented in the Harmony theme look for consensus. They don’t enjoy conflict; rather, they seek areas of agreement.",
+      "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/676/harmony"
+    },
+    {
+      "name": "Consistency",
+      "description": "People exceptionally talented in the Consistency theme are keenly aware of the need to treat people the same. They crave stable routines and clear rules and procedures that everyone can follow.",
+      "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/652/consistency"
+    },
+    {
+      "name": "Learner",
+      "description": "People exceptionally talented in the Learner theme have a great desire to learn and want to continuously improve. The process of learning, rather than the outcome, excites them.",
+      "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/694/learner"
+    },
+    {
+      "name": "Analytical",
+      "description": "People exceptionally talented in the Analytical theme search for reasons and causes. They have the ability to think about all of the factors that might affect a situation.",
+      "link": "https://www.gallupstrengthscenter.com/cms/en-us/gmj/631/analytical"
+    }
+  ],
+  "history": [
+    {
+      "type": "job",
+      "name": "Elmodis",
+      "title": "R&D Engineer",
+      "begin": "2017",
+      "end": null,
+      "details": [
+        "Design and development of Python library used for processing and analyzing high frequency signals (vibration and electric) acquired from rotating machinery monitoring device. It includes data processing tools and time, frequency and order based diagnostic methods.",
+        "Design and development of Python library for cloud based (Microsoft Azure) processing and analyzing time series provided by rotating machinery monitoring devices.",
+        "Development of Machine Learning algorithms used for rotating machinery condition monitoring. Using Supervised and Unsupervised ML solutions.",
+        "Design of acquisition methods and processing algorithms of diagnostic data collected from hardware sensors.",
+        "Cooperation with low level software team developing monitoring device software.",
+        "Cooperation with high level software team developing cloud based software solutions.",
+        "Design and implementation of data acquisition system used at DC Traction Motor test stand. PKP CargoTabor, Karsznice. (Labview)."
+      ]
+    },
+    {
+      "type": "job",
+      "name": "Aiut",
+      "title": "Automation Engineer",
+      "begin": "2010",
+      "end": null,
+      "details": [
+        "SCADA and DCS design and implementation for HVAC System on Oasis class cruise vessel. St. Nazaire, France. (Metso, metsoDNA).",
+        "SCADA and DCS design and implementation for batch cooking process in Pulp Mill. Tres Barras, Brazil. (Metso, metsoDNA).",
+        "SCADA and DCS design and implementation for power plant and effluent treatment plant in Paper Mill. Manchester, UK. (Metso, metsoDNA).",
+        "HMI and PLC logic design and implementation for paper winder with shaft puller in Paper Mill. Changzhou, China (Siemens, S7-300, WinCC flexible).",
+        "HMI and PLC logic design and implementation for paper sizing press. Quzhou, China. (Siemens, S7-400, WinCC flexible).",
+        "SCADA and PLC logic design and implementation for CIP station in Dairy Plant. Radomsko, Poland. (Siemens, S7-300, WinCC).",
+        "SCADA and PLC logic design and implementation for Error-Proofing system in Car Manufacturing Plant. Bochum, Germany (Siemens, S7-400, WinCC)."
+      ]
+    },
+    {
+      "type": "university",
+      "name": "Silesian University of Technology",
+      "title": "MSc. Automation Control",
+      "begin": "2005",
+      "end": null
+    }
+  ],
+  "tools": [
+    {
+      "color": "primary",
+      "name": "Numpy"
+    },
+    {
+      "color": "primary",
+      "name": "Scipy"
+    },
+    {
+      "color": "primary",
+      "name": "Scikit-Learn"
+    },
+    {
+      "color": "primary",
+      "name": "Pandas"
+    },
+    {
+      "color": "primary",
+      "name": "PyTorch"
+    },
+    {
+      "color": "primary",
+      "name": "Matplotlib"
+    },
+    {
+      "color": "primary",
+      "name": "Git"
+    },
+    {
+      "color": "primary",
+      "name": "Confluence"
+    },
+    {
+      "color": "secondary",
+      "name": "Mesto DNA"
+    },
+    {
+      "color": "secondary",
+      "name": "TIA Portal"
+    },
+    {
+      "color": "secondary",
+      "name": "SIMATIC"
+    },
+    {
+      "color": "secondary",
+      "name": "WinCC"
+    },
+    {
+      "color": "secondary",
+      "name": "Labview"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Fourier Explained",
+      "link": "projects/fourier/index.html",
+      "background": "projects/fourier/bacground.png"
+    },
+    {
+      "name": "Batch Cooking Scheduler",
+      "link": "projects/batch_cooking/index.html",
+      "background": "projects/batch_cooking/bacground.png"
+    }
+  ],
+  "contact": {
+    "type": "email",
+    "address": "filip.mularczyk@gmail.com"
+  }
+}
