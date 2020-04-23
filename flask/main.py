@@ -32,5 +32,8 @@ def make_shell_context():
 def deploy():
     """Run deployment tasks."""
     # migrate database to latest revision
-    print(db)
-    upgrade()
+    try:
+        print(db)
+        upgrade()
+    except Exception as e:
+        print(f"Unable do Deploy: \n {e}")
