@@ -2,6 +2,7 @@ version: "3"
 services:
   flask_server:
     container_name: flask_server
+    restart: always
     build:
       args:
         - PROXY=${HTTP_PROXY}
@@ -33,6 +34,7 @@ services:
   nginx:
     image: nginx
     container_name: nginx
+    restart: always
     environment:
       - NGINX_PORT=${NGINX_PORT}
       - SERVER_NAME=${SERVER_NAME}
